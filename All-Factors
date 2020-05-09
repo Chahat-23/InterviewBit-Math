@@ -1,0 +1,15 @@
+vector<int> Solution::allFactors(int A) {
+
+    vector <int > B;
+int m=sqrt(A);
+for (int i=1;i<=m;i++){
+    if(A%i==0){
+        B.push_back(i);
+        if(A/i!=m){
+            B.push_back(A/i);
+        }
+    }
+}
+sort(B.begin(),B.end());
+return B;
+}
