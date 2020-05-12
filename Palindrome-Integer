@@ -1,0 +1,14 @@
+int Solution::isPalindrome(int A) {
+    int rem=0,num=0,x=0;
+    num=A;
+    while(num>0)
+    {
+        rem=num%10;
+        num=num/10;
+        x=(x*10)+rem;
+    }
+    if(x==A)
+    return 1;
+    else
+    return 0;
+}
